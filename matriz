@@ -1,0 +1,10 @@
+matriz = [
+	['fernando', 8, 7, 6],
+	['silvio', 4.5, 9, 10],
+	['edgar', 6, 6, 8],
+]
+
+for linha in matriz:
+	for col in linha:
+		print(str(col) + '\t', end = ' ')
+	print('')
