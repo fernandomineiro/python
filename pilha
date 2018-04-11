@@ -1,0 +1,24 @@
+class pilha:
+	
+	def __init__(self):
+		self.pilha = []
+
+	def colocar(self, e):
+		self.pilha.append(e)
+
+	def retirar(self):
+		if not self.vazio():
+			self.pilha.pop(len(self.pilha) - 1)
+
+	def ultimo(self):
+		if not self.vazio():
+			return self.pilha[-1]
+		return None
+
+	def vazio(self):
+		if (len(self.pilha) == 0):
+			return True
+		return False
+
+	def tamanho(self):
+		return len(self.pilha) 
