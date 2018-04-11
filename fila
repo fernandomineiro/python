@@ -1,0 +1,27 @@
+class fila:
+
+	def __init__(self):
+		self.fila = []
+		self.pos_fila = 0
+
+	def add(self, e):
+		self.fila.append(e)
+		self.pos_fila += 1
+
+	def del(self):
+		if not self.empty():
+			self.fila.pop(0)
+			self.pos_fila -= 1
+
+	def vazio(self):
+		if self.pos_fila == 0:
+			return True
+		return False
+
+	def tamanho(self):
+		return self.pos_fila
+
+	def frente(self):
+		if not self.empty():
+			return self.fila[0]
+		return None
