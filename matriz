@@ -6,5 +6,5 @@ matriz = [
 
 for linha in matriz:
 	for col in linha:
-		print(str(col) + '\t', end = ' ')
+		print(col)
 	print('')
