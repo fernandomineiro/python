@@ -1,0 +1,14 @@
+def bubble_sort(v):
+
+	tamanho = len(v)
+
+	for i in range(tamanho - 1, 0, -1):
+		for j in range(i):
+			if v[j] > v[j + 1]:
+				v[j], v[j + 1] = v[j + 1], v[j]
+				
+		
+
+v = [3, 4, 5, 1, 2, 8, 6]
+bubble_sort(v)
+print(v)
