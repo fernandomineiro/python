@@ -1,0 +1,39 @@
+class Grafo:
+
+	def __init__(self, vertices):
+		self.vertices = vertices
+		self.grafo = [[0] * vertices for i in range(vertices)]
+
+	def add_aresta(self, u, v):
+		self.grafo[u - 1][v - 1] = 1
+		self.grafo[v - 1][u - 1] = 1
+
+	def show(self):
+		for i in self.grafo:
+			for j in i:
+				print(j, end=' ')
+			print('')
+
+	def tem_ligacao(self, u, v):
+		if self.grafo[u - 1][v - 1] == 1:
+			return True
+		return False
+
+	def bfs(self, v):
+
+		visitados = [False] * self.vertices
+		visitados[v - 1] = True
+		fila = [v - 1]
+		print('%d visitado' % v)
+
+	
+		while len(fila) > 0:
+			v = fila[0]
+
+			for u in range(self.vertices):
+				if self.grafo[v][u] == 1:
+					if visitados[u] == False:
+						visitados[u] = True
+						fila.append(u)
+						print('%d visitado' % (u + 1))
+			fila.pop(0)
